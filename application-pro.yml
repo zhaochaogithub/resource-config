@@ -1,0 +1,12 @@
+server: 
+  port: 3344
+
+spring:  application:    name: config
+  cloud:     config: 
+      server: 
+        git: 
+           uri: https://github.com/zhaochaogithub/springcloud-config.git
+      label: master #指定分支
+eureka:  instance:    instance-id: config3344 #Eureka服务中的名称服务
+    prefer-ip-address: true #Eureka服务中可以看到访问的路径会显示具体的IP地址
+  client:    service-url:      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
