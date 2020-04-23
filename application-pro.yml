@@ -1,6 +1,8 @@
 server: 
   port: 3344
 
+test: 1001
+
 spring:
   application:
     name: config
